@@ -35,7 +35,7 @@ int main()
     for (i = 2; i < ziel; i++)
     {
 
-        if (zahlen[i] == 1)
+        if (!zahlen[i] == 1)
         {
             for (j = 2 * i; j < ziel; j += i)
             {
