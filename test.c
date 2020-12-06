@@ -39,7 +39,7 @@ int main()
         {
             for (j = 2 * i; j < ziel; j += i)
             {
-                zahlen[j - 1] = 0;
+                zahlen[j] = 0;
             }
             //k = 2; //muss vor dem nächsten durchlauf wieder auf 2 gesetzt werden
         }
