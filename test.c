@@ -48,7 +48,7 @@ int main()
     {
         if (zahlen[i] == 1)
         {
-            printf("%i, ", i + 1);
+            printf("%i, ", i);
         }
     }
 
