@@ -32,7 +32,7 @@ int main()
 
     printf("\nDie Zahlen sind: ");
     //Sieb anwenden
-    for (i = 1; i < ziel; i++)
+    for (i = 2; i < ziel; i++)
     {
 
         if (zahlen[i] == 1)
