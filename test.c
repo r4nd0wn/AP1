@@ -37,11 +37,11 @@ int main()
 
         if (zahlen[i] == 1)
         {
-            for (j = (i + 1) * k; j < ziel; k++)
+            for (j = 2 * i; j < ziel; j += i)
             {
                 zahlen[j - 1] = 0;
             }
-            k = 2; //muss vor dem nächsten durchlauf wieder auf 2 gesetzt werden
+            //k = 2; //muss vor dem nächsten durchlauf wieder auf 2 gesetzt werden
         }
     }
     for (i = 1; i < ziel; i++)
