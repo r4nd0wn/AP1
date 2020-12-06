@@ -29,7 +29,7 @@ int main()
     {
         zahlen[i] = 1;
     }
-
+    zahlen[1] == 0;
     printf("\nDie Zahlen sind: ");
     //Sieb anwenden
     for (i = 2; i < ziel; i++)
