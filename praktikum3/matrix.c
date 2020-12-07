@@ -19,7 +19,7 @@ void print_matrix(char matrixx[QUADRAT][QUADRAT])
     {
         for (int j = 0; j < QUADRAT; j++)
         {
-            printf("%c ", matrixx[i][j]);
+            printf("%c ", matrixx[j][i]);
         }
         printf("\n");
     }
