@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#define QUADRAT 5
 // Bei Aufruf der Funktion wird das Menü ausgegeben
-void print_menu(){
+void print_menu()
+{
     printf("Optionen:\n(1) Fülle alle Felder mit 0\n");
     printf("(2) Fülle die beiden Diagonalen mit 0\n");
     printf("(3) Fülle ein spezielles Feld mit 0 (Spalte, Zeile)\n");
@@ -10,35 +11,54 @@ void print_menu(){
     printf("(5) Ausgabe der Matrix auf dem Bildschirm\n");
     printf("(6) Ende des Programms\n");
 }
-
-
-int main(){
-    char matrix[5][5];
-    for (int i = 0; i<5; i++){
-        for (int j = 0; j<5; j++){
-            matrix[i][j] = '+';
-        }
-    }
+void print_matrix(char * matrixx){
     printf("Die Matrix sieht so aus:\n\n");
-    for (int i = 0; i<5; i++){
-        for (int j = 0; j<5; j++){
-            printf("%c ", matrix[i][j]);
+    for (int i = 0; i < QUADRAT; i++)
+    {
+        for (int j = 0; j < QUADRAT; j++)
+        {
+            printf("%c ", matrixx[i][j]);
         }
         printf("\n\n");
     }
+}
 
+char * diagonal_zero(char * matrixx)
+{   
+    // einmal eine doppeltes setzen der Variablen, dafür nur 3 Zeilen Code.
+    for (int i = 0; i < QUADRAT; i++){
+        matrixx[i][i] = 0;
+        matrixx[i][5-i] = 0;
+    }
+    return matrixx
+}
+
+int main()
+{
+    char matrix[QUADRAT][QUADRAT];
+    for (int i = 0; i < QUADRAT; i++)
+    {
+        for (int j = 0; j < QUADRAT; j++)
+        {
+            matrix[i][j] = '+';
+        }
+    }
+
+    print_matrix();
     print_menu();
 
     int menu_blocker = 1, menu_selection;
-    while (menu_blocker == 1){
+    while (menu_blocker == 1)
+    {
         scanf("%i", &menu_selection);
         switch (menu_selection)
         {
         case 1:
-            printf("option1\n");
+            
             break;
         case 2:
-            printf("option2\n");
+            matrix = diagonal_zero(matrix);
+            print_matrix(matrix);
             break;
         case 3:
             printf("option3\n");
