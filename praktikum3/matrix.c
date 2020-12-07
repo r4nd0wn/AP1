@@ -44,7 +44,7 @@ int main()
         }
     }
 
-    print_matrix(matrix);
+    print_matrix(&matrix);
     print_menu();
 
     int menu_blocker = 1, menu_selection;
@@ -57,8 +57,8 @@ int main()
             
             break;
         case 2:
-            matrix = diagonal_zero(matrix);
-            print_matrix(matrix);
+            matrix = diagonal_zero(&matrix);
+            print_matrix(&matrix);
             break;
         case 3:
             printf("option3\n");
