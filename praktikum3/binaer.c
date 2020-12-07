@@ -4,14 +4,14 @@
 
 int dualrechner(int ganzzahl){
     int dualzahl[BITARRAY_LENGTH];
-    for (int i = BITARRAY_LENGTH; i>=0; --i){
+    for (int i = BITARRAY_LENGTH-1; i>=0; i--){
         dualzahl[i] = ganzzahl % 2;
         ganzzahl = ganzzahl / 2;
     }
-    for (int i= 0 ; i<BITARRAY_LENGTH-1; i++){
+    for (int i= 0 ; i<BITARRAY_LENGTH; i++){
         printf("%i", dualzahl[i]);
-        printf("\n");
     }
+    printf("\n")
 }
 
 int main(){
