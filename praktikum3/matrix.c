@@ -28,7 +28,7 @@ void diagonal_zero(char matrixx[][QUADRAT])
     // einmal eine doppeltes setzen der Variablen, dafür nur 3 Zeilen Code.
     for (int i = 0; i < QUADRAT; i++){
         matrixx[i][i] = "0";
-        matrixx[i][5-i] = "0";
+        matrixx[i][QUADRAT -1 -i] = "0";
     }
 }
 
