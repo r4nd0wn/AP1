@@ -10,6 +10,7 @@ int main()
     printf("Programm Dualzahl | jbachma2\n\n");
     printf("Geben Sie bitte eine ganze Zahl ein: ");
     scanf("%i", &eingabe);
+    // msb first, daher wird der loop bei dem höchsten Arraywert gestartet
     for (int i = BITARRAY_LENGTH - 1; i >= 0; i--)
     {
         dualzahl[i] = eingabe % 2;
