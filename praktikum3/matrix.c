@@ -39,7 +39,7 @@ void specific_zero(char matrixx[][QUADRAT])
     // sanity check:
     if ((x < QUADRAT && y < QUADRAT) && (x > 0 && y > 0))
     {
-        matrixx[x + 1][y + 1] = 0;
+        matrixx[x + 1][y + 1] = '0';
         printf("Wert an Position %i, %i wurde auf 0 gesetzt");
     }
     else{
