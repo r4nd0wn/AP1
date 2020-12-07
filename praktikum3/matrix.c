@@ -26,7 +26,7 @@ int main(){
         }
         printf("\n\n");
     }
-    
+
     print_menu();
 
     int menu_blocker = 1, menu_selection;
@@ -53,7 +53,7 @@ int main(){
             return 0;
             break;
         default:
-            printf("Bitte probieren sie es noch einmal. Sie mü")
+            printf("Bitte probieren sie es noch einmal. Sie mü");
         }
     }
 }
