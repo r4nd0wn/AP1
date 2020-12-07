@@ -7,7 +7,7 @@ int dualrechner(int ganzzahl){
     int uebergangszahl;
     for (int i = BITARRAY_LENGTH; i>=0; --i){
         uebergangszahl = ganzzahl / 2;
-        dualzahl[i] = ganzzahl % 2;
+        dualzahl[i] = uebergangszahl % 2;
     }
     for (int i= 0 ; i<BITARRAY_LENGTH; i++){
         printf("%i", dualzahl[i]);
