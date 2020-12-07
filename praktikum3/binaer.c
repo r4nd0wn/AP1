@@ -27,7 +27,7 @@ int main()
     }
     else {
         printf("Das hat nicht geklappt.\n");
-        printf("Bitte gib das nächste mal eine Ganzzahl x ein für die gilt: 0 >= x <= 255.\n")
+        printf("Bitte gib das nächste mal eine Ganzzahl x ein für die gilt: 0 >= x <= 255.\n");
     }
     return 0;
 }
