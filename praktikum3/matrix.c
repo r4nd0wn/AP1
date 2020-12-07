@@ -32,16 +32,20 @@ void diagonal_zero(char matrixx[][QUADRAT])
     }
 }
 
-int main()
-{
-    char matrix[QUADRAT][QUADRAT];
+void fill_matrix(char matrixx[][QUADRAT], char fill_char){
     for (int i = 0; i < QUADRAT; i++)
     {
         for (int j = 0; j < QUADRAT; j++)
         {
-            matrix[i][j] = '+';
+            matrixx[i][j] = fill_char;
         }
     }
+}
+
+int main()
+{
+    char matrix[QUADRAT][QUADRAT];
+    
 
     print_matrix(matrix);
     print_menu();
