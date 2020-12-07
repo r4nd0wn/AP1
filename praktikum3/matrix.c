@@ -30,6 +30,7 @@ void diagonal_zero(char matrixx[QUADRAT][QUADRAT])
         matrixx[i][i] = 0;
         matrixx[i][5-i] = 0;
     }
+    return matrixx;
 }
 
 int main()
