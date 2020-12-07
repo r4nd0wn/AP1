@@ -23,7 +23,7 @@ void print_matrix(char matrixx[QUADRAT][QUADRAT]){
     }
 }
 
-void diagonal_zero(char matrixx[][])
+void diagonal_zero(char matrixx[][QUADRAT])
 {   
     // einmal eine doppeltes setzen der Variablen, dafür nur 3 Zeilen Code.
     for (int i = 0; i < QUADRAT; i++){
@@ -56,7 +56,7 @@ int main()
             
             break;
         case 2:
-            diagonal_zero(matrix);
+            diagonal_zero(*matrix);
             print_matrix(matrix);
             break;
         case 3:
