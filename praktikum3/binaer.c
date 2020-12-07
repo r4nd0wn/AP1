@@ -2,8 +2,13 @@
 #include <stdlib.h>
 #define BITARRAY_LENGTH 8
 
-int dualrechner(int ganzzahl){
+int main(){
+    int eingabe;
     int dualzahl[BITARRAY_LENGTH];
+    
+    printf("Programm Dualzahl | jbachma2\n\n");
+    printf("Geben Sie bitte eine ganze Zahl ein: ");
+    scanf("%i", &eingabe);
     for (int i = BITARRAY_LENGTH-1; i>=0; i--){
         dualzahl[i] = ganzzahl % 2;
         ganzzahl = ganzzahl / 2;
@@ -12,13 +17,4 @@ int dualrechner(int ganzzahl){
         printf("%i", dualzahl[i]);
     }
     printf("\n");
-}
-
-int main(){
-    int eingabe;
-    printf("Programm Dualzahl | jbachma2\n\n");
-    printf("Geben Sie bitte eine ganze Zahl ein: ");
-    scanf("%i", &eingabe);
-    dualrechner(eingabe);
-
 }
