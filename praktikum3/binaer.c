@@ -8,7 +8,7 @@ int dualrechner(int ganzzahl){
         dualzahl[i] = ganzzahl % 2;
         ganzzahl = ganzzahl / 2;
     }
-    for (int i= 0 ; i<BITARRAY_LENGTH; i++){
+    for (int i= 0 ; i<BITARRAY_LENGTH; ++i){
         printf("%i", dualzahl[i]);
         printf("\n");
     }
