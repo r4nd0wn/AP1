@@ -34,8 +34,10 @@ void specific_zero(char matrixx[][QUADRAT])
 
     printf("Bitte geben sie die Spalte an (1 - %i): ", QUADRAT);
     scanf("%i", &x);
+    fflush(stdin);
     printf("Bitte geben sie die Zeile an (1 - %i", QUADRAT);
     scanf("%i", &y);
+    fflush(stdin);
     // sanity check:
     if ((x < QUADRAT && y < QUADRAT) && (x > 0 && y > 0))
     {
@@ -82,6 +84,7 @@ int main()
     while (menu_blocker == 1)
     {
         scanf("%i", &menu_selection);
+        fflush(stdin);
         switch (menu_selection)
         {
         case 1:
