@@ -8,12 +8,12 @@ int main(){
             matrix[i][j] = '+';
         }
     }
-    printf("Die Matrix sieht so aus:\n");
+    printf("Die Matrix sieht so aus:\n\n");
     for (int i = 0; i<5; i++){
         for (int j = 0; j<5; j++){
             printf("%c ", matrix[i][j]);
         }
-        printf("\n");
+        printf("\n\n");
     }
     printf("Optionen:\n(1) Fülle alle Felder mit 0\n");
     printf("(2) Fülle die beiden Diagonalen mit 0\n");
@@ -21,4 +21,29 @@ int main(){
     printf("(4) Refresh: Fülle alle Felder wieder mit +\n");
     printf("(5) Ausgabe der Matrix auf dem Bildschirm\n");
     printf("(6) Ende des Programms\n");
+    int menu_blocker = 1, menu_selection;
+    while (menu_blocker == 1){
+        scanf("%i", &menu_selection);
+        switch (menu_selection)
+        {
+        case 1:
+            printf("option1");
+            break;
+        case 2:
+            printf("option2");
+            break;
+        case 3:
+            printf("option3");
+            break;
+        case 4:
+            printf("option4");
+            break;
+        case 5:
+            printf("option5");
+            break;
+        case 6:
+            return 0;
+            break;
+        }
+    }
 }
