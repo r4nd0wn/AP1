@@ -10,6 +10,7 @@ void print_menu()
     printf("(4) Refresh: Fülle alle Felder wieder mit +\n");
     printf("(5) Ausgabe der Matrix auf dem Bildschirm\n");
     printf("(6) Ende des Programms\n");
+    printf("Eingabe: ");
 }
 void print_matrix(char matrixx[QUADRAT][QUADRAT]){
     printf("Die Matrix sieht so aus:\n\n");
@@ -46,7 +47,7 @@ int main()
 {
     char matrix[QUADRAT][QUADRAT];
     
-
+    fill_matrix(matrix, '+');
     print_matrix(matrix);
     print_menu();
 
@@ -57,20 +58,23 @@ int main()
         switch (menu_selection)
         {
         case 1:
-            
+            fill_matrix(matrix, '0');
+            printf("\nEingabe: ");
             break;
         case 2:
             diagonal_zero(matrix);
-            print_matrix(matrix);
+            printf("\nEingabe: ");
             break;
         case 3:
-            printf("option3\n");
+            printf("\nEingabe: ");
             break;
         case 4:
-            printf("option4\n");
+            fill_matrix(matrix, '+');
+            printf("\nEingabe: ");
             break;
         case 5:
-            printf("option5\n");
+            print_matrix(matrix);
+            printf("\nEingabe: ");
             break;
         case 6:
             return 0;
