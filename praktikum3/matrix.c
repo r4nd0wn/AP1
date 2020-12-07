@@ -40,10 +40,11 @@ void specific_zero(char matrixx[][QUADRAT])
     if ((x < QUADRAT && y < QUADRAT) && (x > 0 && y > 0))
     {
         matrixx[x + 1][y + 1] = 0;
-        printf("Wert an Position %i, %i wurde auf 0 gesetzt")
+        printf("Wert an Position %i, %i wurde auf 0 gesetzt");
     }
     else{
-        printf("Sie haben einen Wert außerhalb des Wertebereichs angegeben.\nDas Nullen des Feldes wurde nicht ausgeführt.")
+        printf("Sie haben einen Wert außerhalb des Wertebereichs angegeben.\n");
+        printf("Das Nullen des Feldes wurde nicht ausgeführt.");
     }
 }
 
@@ -92,7 +93,7 @@ int main()
             printf("\nEingabe: ");
             break;
         case 3:
-            specific_zero();
+            specific_zero(matrix);
             break;
         case 4:
             fill_matrix(matrix, '+');
