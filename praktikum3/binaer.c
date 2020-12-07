@@ -11,7 +11,7 @@ int dualrechner(int ganzzahl){
     for (int i= 0 ; i<BITARRAY_LENGTH; i++){
         printf("%i", dualzahl[i]);
     }
-    printf("\n")
+    printf("\n");
 }
 
 int main(){
