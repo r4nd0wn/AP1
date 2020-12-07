@@ -20,6 +20,5 @@ int main(){
     printf("(3) Fülle ein spezielles Feld mit 0 (Spalte, Zeile)\n");
     printf("(4) Refresh: Fülle alle Felder wieder mit +\n");
     printf("(5) Ausgabe der Matrix auf dem Bildschirm\n");
-    printf("(6) Ende des Programms\n")
-
+    printf("(6) Ende des Programms\n");
 }
