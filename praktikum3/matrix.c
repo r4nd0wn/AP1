@@ -11,7 +11,7 @@ void print_menu()
     printf("(5) Ausgabe der Matrix auf dem Bildschirm\n");
     printf("(6) Ende des Programms\n");
 }
-void print_matrix(char matrixx){
+void print_matrix(char matrixx[QUADRAT][QUADRAT]){
     printf("Die Matrix sieht so aus:\n\n");
     for (int i = 0; i < QUADRAT; i++)
     {
