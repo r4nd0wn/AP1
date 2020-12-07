@@ -56,7 +56,7 @@ int main()
             
             break;
         case 2:
-            diagonal_zero(*matrix);
+            diagonal_zero(matrix);
             print_matrix(matrix);
             break;
         case 3:
