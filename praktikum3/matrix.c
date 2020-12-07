@@ -20,8 +20,9 @@ void print_matrix(char matrixx[QUADRAT][QUADRAT]){
         {
             printf("%c ", matrixx[i][j]);
         }
-        printf("\n\n");
+        printf("\n");
     }
+    printf("\n");
 }
 
 void diagonal_zero(char matrixx[][QUADRAT])
