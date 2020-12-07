@@ -11,24 +11,24 @@ void print_menu()
     printf("(5) Ausgabe der Matrix auf dem Bildschirm\n");
     printf("(6) Ende des Programms\n");
 }
-void print_matrix(char *matrixx){
+void print_matrix(char matrixx){
     printf("Die Matrix sieht so aus:\n\n");
     for (int i = 0; i < QUADRAT; i++)
     {
         for (int j = 0; j < QUADRAT; j++)
         {
-            printf("%c ", *matrixx[i][j]);
+            printf("%c ", matrixx[i][j]);
         }
         printf("\n\n");
     }
 }
 
-void diagonal_zero(char *matrixx)
+void diagonal_zero(char matrixx)
 {   
     // einmal eine doppeltes setzen der Variablen, dafür nur 3 Zeilen Code.
     for (int i = 0; i < QUADRAT; i++){
-        *matrixx[i][i] = 0;
-        *matrixx[i][5-i] = 0;
+        matrixx[i][i] = 0;
+        matrixx[i][5-i] = 0;
     }
 }
 
@@ -43,7 +43,7 @@ int main()
         }
     }
 
-    print_matrix(&matrix);
+    print_matrix(matrix);
     print_menu();
 
     int menu_blocker = 1, menu_selection;
@@ -56,8 +56,8 @@ int main()
             
             break;
         case 2:
-            matrix = diagonal_zero(&matrix);
-            print_matrix(&matrix);
+            matrix = diagonal_zero(matrix);
+            print_matrix(matrix);
             break;
         case 3:
             printf("option3\n");
