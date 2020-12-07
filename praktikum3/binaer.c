@@ -1,10 +1,11 @@
 #include <stdio.h>
 
+#define BITARRAY_LENGTH 8
+
 int main()
 {
     int eingabe;
     int dualzahl[BITARRAY_LENGTH];
-#define BITARRAY_LENGTH 8
 
     printf("Programm Dualzahl | jbachma2\n\n");
     printf("Geben Sie bitte eine ganze Zahl ein: ");
