@@ -19,7 +19,7 @@ void print_matrix(char matrixx[QUADRAT][QUADRAT])
     {
         for (int j = 0; j < QUADRAT; j++)
         {
-            printf("%c ", matrixx[j][i]);
+            printf("%c ", matrixx[i][j]);
         }
         printf("\n");
     }
@@ -39,12 +39,12 @@ void specific_zero(char matrixx[][QUADRAT])
     // sanity check:
     if ((x < QUADRAT && y < QUADRAT) && (x > 0 && y > 0))
     {
-        matrixx[x + 1][y + 1] = '0';
+        matrixx[x - 1][y - 1] = '0';
         printf("Wert an Position %i, %i wurde auf 0 gesetzt");
     }
     else{
         printf("Sie haben einen Wert außerhalb des Wertebereichs angegeben.\n");
-        printf("Das Nullen des Feldes wurde nicht ausgeführt.");
+        printf("Das Nullen des Feldes wurde nicht ausgeführt. \n");
     }
 }
 
@@ -94,6 +94,7 @@ int main()
             break;
         case 3:
             specific_zero(matrix);
+            printf("\nEingabe: ")
             break;
         case 4:
             fill_matrix(matrix, '+');
