@@ -94,7 +94,7 @@ int main()
             break;
         case 3:
             specific_zero(matrix);
-            printf("\nEingabe: ")
+            printf("\nEingabe: ");
             break;
         case 4:
             fill_matrix(matrix, '+');
