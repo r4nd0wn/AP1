@@ -35,25 +35,27 @@ int main(){
         switch (menu_selection)
         {
         case 1:
-            printf("option1");
+            printf("option1\n");
             break;
         case 2:
-            printf("option2");
+            printf("option2\n");
             break;
         case 3:
-            printf("option3");
+            printf("option3\n");
             break;
         case 4:
-            printf("option4");
+            printf("option4\n");
             break;
         case 5:
-            printf("option5");
+            printf("option5\n");
             break;
         case 6:
             return 0;
             break;
         default:
-            printf("Bitte probieren sie es noch einmal. Sie mü");
+            printf("Dieser Menüpunkt ist leider invalid. Bitte probieren sie es noch mal.\n");
+            print_menu();
+            break;
         }
     }
 }
