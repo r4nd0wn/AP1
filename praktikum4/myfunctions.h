@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int sucheZeichen(const char s[], char c);
-int laengeZeichenkette(const char s[])
-
+int laengeZeichenkette(const char s[]);
 
 int sucheZeichen(const char s[], char c)
 {
