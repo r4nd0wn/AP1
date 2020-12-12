@@ -27,17 +27,17 @@ int main()
     int menu_blocker = 1;
     printf("Bitte Namen eingeben: ");
     fflush(stdin);
-    scanf("%s", &eingabe);
+    scanf(" %s", &eingabe);
     
     printf("%s hat %i Zeichen.\n", eingabe, laengeZeichenkette(eingabe));
     while(entscheidung == 'j')
     {
         printf("Möchtest Du nach einem Buchstaben in %s suchen (j / n)? ", eingabe);
-        scanf("%c", &entscheidung);
+        scanf(" %c", &entscheidung);
         if (entscheidung == 'j')
         {
             printf("Bitte Buchstaben eingeben: ");
-            scanf("%c", &suche);
+            scanf(" %c", &suche);
             printf("Der buchstabe %c kommt %i-mal vor.\n", suche, sucheZeichen(eingabe, suche));
         }
     }
