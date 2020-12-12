@@ -14,7 +14,7 @@ int sucheZeichen(const char s[], char c)
 
 int laengeZeichenkette(const char s[])
 {
-    return (sizeof(s) / sizeof(char));
+    return (sizeof(s) / sizeof(int));
 }
 
 int main()
