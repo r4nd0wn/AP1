@@ -39,7 +39,7 @@ int main()
             scanf(" %c", &suche);
             printf("Der buchstabe %c kommt %i-mal vor.\n", suche, sucheZeichen(eingabe, suche));
         }
-    }while(entscheidung == 'j')
+    }while(entscheidung == 'j');
     printf("Auf Wiedersehen!\n");
     return 0;
 }
