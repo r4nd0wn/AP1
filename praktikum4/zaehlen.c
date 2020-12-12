@@ -16,7 +16,7 @@ int sucheZeichen(const char s[], char c)
 
 int laengeZeichenkette(const char s[])
 {
-    int size = sizeof(s) / 8;
+    int size = sizeof(s);
     return size;
 }
 
