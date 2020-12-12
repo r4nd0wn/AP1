@@ -27,7 +27,7 @@ int main()
     printf("%s hat %i Zeichen.", eingabe, laengeZeichenkette(eingabe));
     do
     {
-        printf("Möchtest Du nach einem Buchstaben in %s suchen (j / n)? ");
+        printf("Möchtest Du nach einem Buchstaben in %s suchen (j / n)? ", eingabe);
         scanf("%c", &entscheidung);
         if (entscheidung == 'j')
         {
