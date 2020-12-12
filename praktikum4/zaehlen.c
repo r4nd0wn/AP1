@@ -25,7 +25,7 @@ int main()
     printf("Bitte Namen eingeben: ");
     scanf("%s", &eingabe);
     printf("%s hat %i Zeichen.\n", eingabe, laengeZeichenkette(eingabe));
-    do
+    while(entscheidung == 'j')
     {
         printf("Möchtest Du nach einem Buchstaben in %s suchen (j / n)? ", eingabe);
         scanf("%c", &entscheidung);
@@ -35,7 +35,7 @@ int main()
             scanf("%c", &suche);
             printf("Der buchstabe %c kommt %i-mal vor.\n", suche, sucheZeichen(eingabe, suche));
         }
-    } while (entscheidung == 'j');
+    }
     printf("Auf Wiedersehen!\n");
     return 0;
 }
