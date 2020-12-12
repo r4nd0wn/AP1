@@ -14,13 +14,13 @@ int sucheZeichen(const char s[], char c)
 
 int laengeZeichenkette(const char s[])
 {
-    return (sizeof(s) / sizeof(int));
+    return sizeof(s);
 }
 
 int main()
 {
     char eingabe[20];
-    char entscheidung, suche;
+    char entscheidung = 'j', suche;
     int menu_blocker = 1;
     printf("Bitte Namen eingeben: ");
     scanf("%s", &eingabe);
