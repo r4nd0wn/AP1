@@ -1,10 +1,10 @@
 #include <stdio.h>
-#define ARRAYLENGTH(x)  (sizeof(x) / sizeof((x)[0]))
+#define ARRAYLENGTH(x) (sizeof(x) / sizeof((x)[0]))
 
 int sucheZeichen(const char s[], char c)
 {
     int counter = 0;
-    for (int i = 0; i < (sizeof(s) / sizeof(char)); i++)
+    for (int i = 0; i < laengeZeichenkette(s); i++)
     {
         if (c == s[i])
         {
@@ -17,7 +17,7 @@ int sucheZeichen(const char s[], char c)
 int laengeZeichenkette(const char s[])
 {
     int size = 0;
-    while(s[size++]);
+    while (s[size++]);
     return (size - 1);
 }
 
@@ -28,7 +28,7 @@ int main()
     printf("Bitte Namen eingeben: ");
     fflush(stdin);
     scanf(" %s", &eingabe);
-    
+
     printf("%s hat %i Zeichen.\n", eingabe, laengeZeichenkette(eingabe));
     do
     {
@@ -40,7 +40,7 @@ int main()
             scanf(" %c", &suche);
             printf("Der buchstabe %c kommt %i-mal vor.\n", suche, sucheZeichen(eingabe, suche));
         }
-    }while(entscheidung == 'j');
+    } while (entscheidung == 'j');
     printf("Auf Wiedersehen!\n");
     return 0;
 }
