@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define ARRAY_LENGTH(x)  (sizeof(x) / sizeof((x)[0]))
+#define ARRAYLENGTH(x)  (sizeof(x) / sizeof((x)[0]))
 
 int sucheZeichen(const char s[], char c)
 {
@@ -16,7 +16,8 @@ int sucheZeichen(const char s[], char c)
 
 int laengeZeichenkette(const char s[])
 {
-    return ARRAY_LENGTH(s);
+    int size = sizeof(s) / 8;
+    return size;
 }
 
 int main()
@@ -27,7 +28,7 @@ int main()
     printf("Bitte Namen eingeben: ");
     scanf("%s", &eingabe);
     
-    printf("%s hat %i Zeichen.\n", eingabe, laengeZeichenkette(eingabe));
+    printf("%s hat %i Zeichen.\n", eingabe, laengeZeichenkette(&eingabe));
     while(entscheidung == 'j')
     {
         printf("Möchtest Du nach einem Buchstaben in %s suchen (j / n)? ", eingabe);
