@@ -16,7 +16,7 @@ int laengeZeichenkette(const char s[]){
 }
 
 int main(){
-    char eingabe[];
+    char eingabe*;
     char entscheidung, suche;
     int menu_blocker = 1;
     printf("Bitte Namen eingeben: ");
