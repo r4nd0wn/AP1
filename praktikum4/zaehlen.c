@@ -2,7 +2,7 @@
 int sucheZeichen(const char s[], char c)
 {
     int counter = 0;
-    for (int i = 0; i < sizeof(s) / sizeof(char); i++)
+    for (int i = 0; i < (sizeof(s) / sizeof(char)); i++)
     {
         if (c == s[i])
         {
@@ -14,7 +14,7 @@ int sucheZeichen(const char s[], char c)
 
 int laengeZeichenkette(const char s[])
 {
-    return sizeof(s) / sizeof(char);
+    return (sizeof(s) / sizeof(char));
 }
 
 int main()
@@ -24,7 +24,7 @@ int main()
     int menu_blocker = 1;
     printf("Bitte Namen eingeben: ");
     scanf("%s", &eingabe);
-    printf("%s hat %i Zeichen.", eingabe, laengeZeichenkette(eingabe));
+    printf("%s hat %i Zeichen.\n", eingabe, laengeZeichenkette(eingabe));
     do
     {
         printf("Möchtest Du nach einem Buchstaben in %s suchen (j / n)? ", eingabe);
