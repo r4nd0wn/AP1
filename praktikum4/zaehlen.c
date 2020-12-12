@@ -1,4 +1,6 @@
 #include <stdio.h>
+#define ARRAY_LENGTH(x)  (sizeof(x) / sizeof((x)[0]))
+
 int sucheZeichen(const char s[], char c)
 {
     int counter = 0;
@@ -14,8 +16,7 @@ int sucheZeichen(const char s[], char c)
 
 int laengeZeichenkette(const char s[])
 {
-    int size = sizeof(s) / 8;
-    return size;
+    return ARRAY_LENGTH(s);
 }
 
 int main()
