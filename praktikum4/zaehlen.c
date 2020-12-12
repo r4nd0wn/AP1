@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define ARRAYLENGTH(x) (sizeof(x) / sizeof((x)[0]))
+#include <stdlib.h>
 
 int sucheZeichen(const char s[], char c)
 {
@@ -33,10 +33,12 @@ int main()
     do
     {
         printf("Möchtest Du nach einem Buchstaben in %s suchen (j / n)? ", eingabe);
+        fflush(stdin);
         scanf(" %c", &entscheidung);
         if (entscheidung == 'j')
         {
             printf("Bitte Buchstaben eingeben: ");
+            fflush(stdin);
             scanf(" %c", &suche);
             printf("Der buchstabe %c kommt %i-mal vor.\n", suche, sucheZeichen(eingabe, suche));
         }
