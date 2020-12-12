@@ -22,7 +22,7 @@ int laengeZeichenkette(const char s[])
 
 int main()
 {
-    char eingabe[20];
+    char eingabe[200];
     char entscheidung = 'j', suche;
     int menu_blocker = 1;
     printf("Bitte Namen eingeben: ");
