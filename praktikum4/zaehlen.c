@@ -38,7 +38,7 @@ int main()
         {
             printf("Bitte Buchstaben eingeben: ");
             scanf("%c", &suche);
-            printf("Der buchstabe %c kommt %i-mal vor.\n     suche, sucheZeichen(eingabe, suche));
+            printf("Der buchstabe %c kommt %i-mal vor.\n", suche, sucheZeichen(eingabe, suche));
         }
     }
     printf("Auf Wiedersehen!\n");
