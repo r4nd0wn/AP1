@@ -14,7 +14,7 @@ int sucheZeichen(const char s[], char c)
 
 int laengeZeichenkette(const char s[])
 {
-    int size = sizeof(s) / sizeof(char);
+    int size = sizeof(s) / 8;
     return size;
 }
 
@@ -25,6 +25,7 @@ int main()
     int menu_blocker = 1;
     printf("Bitte Namen eingeben: ");
     scanf("%s", &eingabe);
+    
     printf("%s hat %i Zeichen.\n", eingabe, laengeZeichenkette(eingabe));
     while(entscheidung == 'j')
     {
