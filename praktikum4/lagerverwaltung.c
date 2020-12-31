@@ -29,7 +29,12 @@ void add_artikel(Lager lager[LAGERGROESSE], char artikel2add[ARTIKELMAXLENGTH], 
     if (index < 0)
     {
         printf("Der Artikel wird dem Lager hinzugefügt.\n");
-        strcpy(lager[index * -1].artikelname, artikel2add);
+        int i = 0;
+        while (artikel2add[i] != '\0'){
+            lager[index * -1].artikelname[i] = artikel2add[i];
+            i++;
+        }
+        //strcpy(lager[index * -1].artikelname, artikel2add);
         lager[index * -1].anzahl = 1;
     }
     else if (index == LAGERGROESSE)
@@ -62,11 +67,21 @@ void lagerexport(Lager lager[LAGERGROESSE])
     for (int i = 0; i < LAGERGROESSE; i++)
     {
         if (lager[i].anzahl > 0){
-            printf("%-20s%7i\n", lager[i].artikelname, lager[i].anzahl);
+            printf("%-20s%6i\n", lager[i].artikelname, lager[i].anzahl);
             summe = summe + lager[i].anzahl;
         }
     }
-    printf("Summe = %i", summe);
+    printf("Summe = %i\n", summe);
+}
+
+void printmenu(){
+    printf("-----------MENU-----------\n");
+    printf("(1) Artikel hinzufügen\n");
+    printf("(2) Artikel entnehmen\n");
+    printf("(3) Eintrag suchen\n");
+    printf("(4) Lager export\n");
+    printf("(5) Dieses Menü ausgeben\n");
+    printf("(6) Programm beenden\n");
 }
 
 int main()
@@ -81,6 +96,9 @@ int main()
 
     char eing[ARTIKELMAXLENGTH];
     int index;
+
+    printf("Programm Lagerverwaltung | jbachma2\n\n");
+    printmenu();
     do
     {
         scanf("%i", &eingabe);
@@ -120,13 +138,17 @@ int main()
             lagerexport(lager);
             break;
         case 5:
+            printmenu();
+            break;
+        case 6:
             return 1;
             break;
         default:
             printf("Diese eingabe war invalid\n");
             break;
+        
         }
 
-    } while (eingabe != 5);
+    } while (eingabe != 6);
 }
 
