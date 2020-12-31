@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+int laengeZeichenkette(const char s[])
+{
+    int size = 0;
+    while (s[size++])
+        ;
+    return (size - 1);
+}
+
 int sucheZeichen(const char s[], char c)
 {
     int counter = 0;
@@ -11,13 +19,6 @@ int sucheZeichen(const char s[], char c)
         }
     }
     return counter;
-}
-
-int laengeZeichenkette(const char s[])
-{
-    int size = 0;
-    while (s[size++]);
-    return (size - 1);
 }
 
 int main()

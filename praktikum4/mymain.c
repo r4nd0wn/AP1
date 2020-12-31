@@ -8,7 +8,6 @@ int main()
     printf("Bitte Namen eingeben: ");
     fflush(stdin);
     scanf(" %s", &eingabe);
-
     printf("%s hat %i Zeichen.\n", eingabe, laengeZeichenkette(eingabe));
     do
     {

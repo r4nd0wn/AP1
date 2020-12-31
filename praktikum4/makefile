@@ -1,5 +1,6 @@
- # build an executable named myprog from myprog.c
-all: mymain.c 
-	gcc -g -Wall -o myprogram mymain.c
-clean: 
-	$(RM) myprogram
+# build an executable named myprog from myprog.c
+app: mymain.c myfunctions.o
+    gcc -o app mymain.c myfunctions.o
+
+myfunctions.o: myfunctions.h
+    gcc -c myfunctions.h
