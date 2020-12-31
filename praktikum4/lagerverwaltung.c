@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 #define ARTIKELMAXLENGTH 10
 #define LAGERGROESSE 10
 
@@ -24,17 +26,19 @@ int indexSuchen(Lager lagerinhalt[], char suchstring[])
     }
     return leerer_index;
 }
+
 void add_artikel(Lager lager[LAGERGROESSE], char artikel2add[ARTIKELMAXLENGTH], int index)
 {
     if (index < 0)
     {
         printf("Der Artikel wird dem Lager hinzugefügt.\n");
         int i = 0;
-        while (artikel2add[i] != '\0'){
+        while (artikel2add[i] != '\0')
+        {
             lager[index * -1].artikelname[i] = artikel2add[i];
             i++;
         }
-        //strcpy(lager[index * -1].artikelname, artikel2add);
+        lager[index * -1].artikelname[i] = '\0';
         lager[index * -1].anzahl = 1;
     }
     else if (index == LAGERGROESSE)
@@ -45,9 +49,9 @@ void add_artikel(Lager lager[LAGERGROESSE], char artikel2add[ARTIKELMAXLENGTH], 
     {
         printf("Der Artikel ist bereits vorhanden, die Anzahl wird um 1 erhöht.\n");
         lager[index].anzahl++;
-        //printf("%s mit der Anzahl %i an der Stelle %i\n", lager[index].artikelname, lager[index].anzahl, index);
     }
 }
+
 void rm_artikel(Lager lager[LAGERGROESSE], char artikel2rm[ARTIKELMAXLENGTH], int index)
 {
     if (index >= 0 && index != LAGERGROESSE && lager[index].anzahl > 0)
@@ -59,14 +63,16 @@ void rm_artikel(Lager lager[LAGERGROESSE], char artikel2rm[ARTIKELMAXLENGTH], in
         printf("Der angegebene Artikel ist entweder nicht vorhanden, oder der Bestand ist 0.");
     }
 }
+
 void lagerexport(Lager lager[LAGERGROESSE])
 {
     unsigned int summe = 0;
-    printf("--------LAGEREXPORT--------\n");
+    printf("--------LAGEREXPORT-------\n");
     printf("%-20s%-7s\n", "Artikelname", "Anzahl");
     for (int i = 0; i < LAGERGROESSE; i++)
     {
-        if (lager[i].anzahl > 0){
+        if (lager[i].anzahl > 0)
+        {
             printf("%-20s%6i\n", lager[i].artikelname, lager[i].anzahl);
             summe = summe + lager[i].anzahl;
         }
@@ -74,7 +80,8 @@ void lagerexport(Lager lager[LAGERGROESSE])
     printf("Summe = %i\n", summe);
 }
 
-void printmenu(){
+void printmenu()
+{
     printf("-----------MENU-----------\n");
     printf("(1) Artikel hinzufügen\n");
     printf("(2) Artikel entnehmen\n");
@@ -146,9 +153,7 @@ int main()
         default:
             printf("Diese eingabe war invalid\n");
             break;
-        
         }
 
     } while (eingabe != 6);
 }
-
