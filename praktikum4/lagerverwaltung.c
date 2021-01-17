@@ -27,7 +27,6 @@ int indexSuchen(Lager lagerinhalt[], char suchstring[])
     return leerer_index;
 }
 
-
 void add_artikel(Lager lager[LAGERGROESSE], char artikel2add[ARTIKELMAXLENGTH], int index)
 {
     if (index < 0)
@@ -155,6 +154,5 @@ int main()
             printf("Diese eingabe war invalid\n");
             break;
         }
-
     } while (eingabe != 6);
 }
