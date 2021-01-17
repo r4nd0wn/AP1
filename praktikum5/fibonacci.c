@@ -8,29 +8,39 @@ typedef struct Fibo_
 
 int fibcalc(int n, int i, int sum)
 {
-    if (sum == 0){
+    if (sum == 0)
+    {
         i++;
-        fibcalc(0,i,sum + 1);
+        fibcalc(n, i, sum + 1);
     }
-    else{
+    else if (n != i)
+    {
         i++;
-        fibcalc(0,i,sum+i);
+        fibcalc(0, i, sum + i);
     }
-    return sum;
-    if (i <= n && i > 1){
+    else
+    {
+
+        return sum;
+    }
+    if (i <= n && i > 1)
+    {
         printf("Die FibSumme bei n=%d ist: \t%d\n", i, sum);
         i++;
         fibcalc(n, i, sum + i);
     }
-    else if(i == 1){
+    else if (i == 1)
+    {
         printf("Die FibSumme bei n=%d ist: \t%d\n", i, sum);
         fibcalc(n, ++i, sum + 1);
     }
-    else if(i == 0){
+    else if (i == 0)
+    {
         printf("Die FibSumme bei n=%d ist: \t%d\n", i, sum);
         fibcalc(n, ++i, sum);
     }
-    else{
+    else
+    {
         return sum;
     }
 }
