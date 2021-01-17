@@ -6,42 +6,25 @@ typedef struct Fibo_
     struct Fibo_ *next;
 } Fibo;
 
-int fibcalc(int n, int i, int sum)
+int fibcalc(int n, int limit, int fn)
 {
-    if (sum == 0)
-    {
-        i++;
-        fibcalc(n, i, sum + 1);
+    if (n == 0){
+        fn = 0;
+        n++;
+        fibcalc(n, limit, fn);
     }
-    else if (n != i)
-    {
-        i++;
-        fibcalc(0, i, sum + i);
+    else if (n == 1) {
+        fn == 1;
+        n++;
+        fibcalc(n, limit, fn);
     }
-    else
-    {
-
-        return sum;
+    else if (n > 1 && n <= limit){
+        fn = fn + n;
+        n++;
+        fibcalc(n, limit, fn);
     }
-    if (i <= n && i > 1)
-    {
-        printf("Die FibSumme bei n=%d ist: \t%d\n", i, sum);
-        i++;
-        fibcalc(n, i, sum + i);
-    }
-    else if (i == 1)
-    {
-        printf("Die FibSumme bei n=%d ist: \t%d\n", i, sum);
-        fibcalc(n, ++i, sum + 1);
-    }
-    else if (i == 0)
-    {
-        printf("Die FibSumme bei n=%d ist: \t%d\n", i, sum);
-        fibcalc(n, ++i, sum);
-    }
-    else
-    {
-        return sum;
+    else {
+        return fn;
     }
 }
 
@@ -49,9 +32,9 @@ int main()
 {
     while (1)
     {
-        int f;
+        int limit;
         printf("Bitte geben sie eine Zahl für die fibonacci Berechnung ein: ");
-        scanf("%d", &f);
-        printf("ihre Fibonacci Zahl ist %d.\n", fibcalc(f, 0, 0));
+        scanf("%d", &limit);
+        printf("ihre Fibonacci Zahl ist %d.\n", fibcalc(0, limit, 0));
     }
 }
